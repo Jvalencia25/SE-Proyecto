@@ -1,3 +1,4 @@
+import 'package:erp_reposteria/constants.dart';
 import 'package:flutter/material.dart';
 class TabletScaffold extends StatefulWidget {
   const TabletScaffold({super.key});
@@ -10,7 +11,9 @@ class _TabletScaffoldState extends State<TabletScaffold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 241, 240, 205),
+      appBar: MyAppBar,
+      backgroundColor: MyDefaultBackround,
+      drawer: MyDrawer, 
     );
   }
 }

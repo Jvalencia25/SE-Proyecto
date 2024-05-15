@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: ResponsiveLayout(
-        mobileScaffold: MobileScaffold(),
-        tabletScaffold: TabletScaffold(),
-        desktopScaffold: DesktopScaffold(),
+        mobileScaffold: const MobileScaffold(),
+        tabletScaffold: const TabletScaffold(),
+        desktopScaffold: const DesktopScaffold(),
       ),
       debugShowCheckedModeBanner: false
 
