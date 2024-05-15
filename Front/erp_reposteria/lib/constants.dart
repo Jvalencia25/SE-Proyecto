@@ -9,22 +9,18 @@ var MyAppBar = AppBar(
 var MyDrawer = Drawer(
         backgroundColor: Colors.blueAccent,
         child: Column(children: [
-          DrawerHeader(child: Icon(Icons.favorite_border_rounded)),
-          ListTile(
-            leading: Icon(Icons.inventory_2_rounded),
-            title: Text('I N V E N T A R I O'),
-          ),
-          ListTile(
-            leading: Icon(Icons.article),
-            title: Text('C A T Á L O G O'),
-          ),
-          ListTile(
-            leading: Icon(Icons.local_shipping_outlined),
-            title: Text('P E D I D O S'),
-          ),
+          DrawerHeader(child: Icon(Icons.local_restaurant)),
           ListTile(
             leading: Icon(Icons.account_circle_rounded),
-            title: Text('R E G I S T R O'),
-          )
+            title: Text('Usuario'),
+          ),
+          ListTile(
+            leading: Icon(Icons.business),
+            title: Text('Sobre la empresa'),
+          ),
+          ListTile(
+            leading: Icon(Icons.article_rounded),
+            title: Text('Sobre el proyecto'),
+          ),
         ],),
       );
