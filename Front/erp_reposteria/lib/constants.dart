@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-var MyDefaultBackround = Colors.grey[300];
+// ignore: non_constant_identifier_names
+var MyDefaultBackround = const Color.fromARGB(255, 242, 241, 209);
 
+// ignore: non_constant_identifier_names
 var MyAppBar = AppBar(
-        backgroundColor: Colors.grey[600],
+        backgroundColor: const Color.fromARGB(255, 242, 241, 209),
+        title: Text('La Dolce Vita', style: GoogleFonts.abrilFatface()),
+        titleTextStyle: const TextStyle(
+          color: Color.fromARGB(255, 164, 31, 53),
+          fontSize: 25,
+        ),
         shadowColor: Colors.grey,
-        elevation: 2,
+        elevation: 1,
 );
 
-var MyDrawer = Drawer(
-        backgroundColor: Colors.grey[300],
+// ignore: non_constant_identifier_names
+var MyDrawer = const Drawer(
+        backgroundColor: Color.fromARGB(255, 242, 241, 209),
         shadowColor: Colors.grey,
         elevation: 4,
         child: Column(children: [
