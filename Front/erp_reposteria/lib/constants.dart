@@ -22,18 +22,21 @@ var MyDrawer = const Drawer(
         shadowColor: Colors.grey,
         elevation: 4,
         child: Column(children: [
-          DrawerHeader(child: Icon(Icons.local_restaurant)),
+          DrawerHeader(child: Icon(Icons.favorite)),
           ListTile(
             leading: Icon(Icons.account_circle_rounded),
             title: Text('Usuario'),
+            textColor: Color.fromARGB(255, 164, 31, 53),
           ),
           ListTile(
             leading: Icon(Icons.business),
             title: Text('Sobre la empresa'),
+            textColor: Color.fromARGB(255, 164, 31, 53)
           ),
           ListTile(
             leading: Icon(Icons.article_rounded),
             title: Text('Sobre el proyecto'),
+            textColor: Color.fromARGB(255, 164, 31, 53)
           ),
         ],),
       );

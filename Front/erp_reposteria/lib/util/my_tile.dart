@@ -11,6 +11,6 @@ class MyTile extends StatelessWidget {
                 color: Colors.amber,
                 height: 80,
                 ),
-            );;
+            );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:erp_reposteria/constants.dart';
 import 'package:erp_reposteria/util/my_box.dart';
+import 'package:erp_reposteria/util/my_box_data.dart';
 import 'package:flutter/material.dart';
 class TabletScaffold extends StatefulWidget {
   const TabletScaffold({super.key});
@@ -27,7 +28,12 @@ class _TabletScaffoldState extends State<TabletScaffold> {
               gridDelegate: 
                 SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
             itemBuilder: (context,index){
-              return MyBox();
+              final boxData = myBoxData[index];
+              return MyBox(
+                text: boxData.text,
+                imageUrl: boxData.imageUrl, 
+                onTap: () {  },
+              );
             }),
             ),
             ),

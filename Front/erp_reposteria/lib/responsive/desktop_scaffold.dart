@@ -1,5 +1,6 @@
 import 'package:erp_reposteria/constants.dart';
 import 'package:erp_reposteria/util/my_box.dart';
+import 'package:erp_reposteria/util/my_box_data.dart';
 import 'package:flutter/material.dart';
 
 class DesktopScaffold extends StatefulWidget {
@@ -27,9 +28,14 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
             child: GridView.builder(
               itemCount: 4,
               gridDelegate: 
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
+                const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
             itemBuilder: (context,index){
-              return MyBox();
+              final boxData = myBoxData[index];
+              return MyBox(
+                text: boxData.text,
+                imageUrl: boxData.imageUrl, 
+                onTap: () {  },
+              );
             }),
             ),
             ),
