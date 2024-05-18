@@ -20,17 +20,19 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
         Expanded(child: Column(
         children: [
           //4 box on the top
-          AspectRatio(
-            aspectRatio: 1,
-          child: SizedBox(
-          child: GridView.builder(
-            itemCount: 4,
-            gridDelegate: 
-              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
-          itemBuilder: (context,index){
-            return MyBox();
-          }),
-          ),
+          Expanded(
+            child: AspectRatio(
+              aspectRatio: 1,
+            child: SizedBox(
+            child: GridView.builder(
+              itemCount: 4,
+              gridDelegate: 
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
+            itemBuilder: (context,index){
+              return MyBox();
+            }),
+            ),
+            ),
           ),
           
         ],

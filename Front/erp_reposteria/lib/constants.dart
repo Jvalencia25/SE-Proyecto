@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
-var MyDefaultBackround = Color.fromARGB(255, 241, 240, 205);
+var MyDefaultBackround = Colors.grey[300];
 
 var MyAppBar = AppBar(
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.grey[600],
+        shadowColor: Colors.grey,
+        elevation: 2,
 );
 
 var MyDrawer = Drawer(
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.grey[300],
+        shadowColor: Colors.grey,
+        elevation: 4,
         child: Column(children: [
           DrawerHeader(child: Icon(Icons.local_restaurant)),
           ListTile(
