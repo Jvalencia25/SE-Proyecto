@@ -1,7 +1,7 @@
-import 'package:erp_reposteria/responsive/desktop_scaffold.dart';
-import 'package:erp_reposteria/responsive/mobile_scaffold.dart';
-import 'package:erp_reposteria/responsive/responsive_layout.dart';
-import 'package:erp_reposteria/responsive/tablet_scaffold.dart';
+import 'package:erp_reposteria/user_responsive/user_desktop_scaffold.dart';
+import 'package:erp_reposteria/user_responsive/user_mobile_scaffold.dart';
+import 'package:erp_reposteria/user_responsive/user_responsive_layout.dart';
+import 'package:erp_reposteria/user_responsive/user_tablet_scaffold.dart';
 import 'package:flutter/material.dart';
 
 void main() {

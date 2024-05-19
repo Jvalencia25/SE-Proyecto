@@ -32,7 +32,9 @@ class _MobileScaffoldState extends State<MobileScaffold> {
               return MyBox(
                 text: boxData.text,
                 imageUrl: boxData.imageUrl, 
-                onTap: () {  },
+                onTap: () { 
+                  
+                 },
               );
             }),
             ),
