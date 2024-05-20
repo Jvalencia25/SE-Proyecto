@@ -24,10 +24,10 @@ class MyBox extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.network(imageUrl, height: 100, width: 100, fit: BoxFit.cover),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
                 text,
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: const TextStyle(color: Colors.white, fontSize: 20),
               ),
             ],
           ),

@@ -1,7 +1,7 @@
-import 'package:erp_reposteria/user_responsive/user_desktop_scaffold.dart';
-import 'package:erp_reposteria/user_responsive/user_mobile_scaffold.dart';
-import 'package:erp_reposteria/user_responsive/user_responsive_layout.dart';
-import 'package:erp_reposteria/user_responsive/user_tablet_scaffold.dart';
+import 'package:erp_reposteria/start_responsive/start_desktop_scaffold.dart';
+import 'package:erp_reposteria/start_responsive/start_mobile_scaffold.dart';
+import 'package:erp_reposteria/start_responsive/start_responsive_layout.dart';
+import 'package:erp_reposteria/start_responsive/start_tablet_scaffold.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,10 +19,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ResponsiveLayout(
-        mobileScaffold: const MobileScaffold(),
-        tabletScaffold: const TabletScaffold(),
-        desktopScaffold: const DesktopScaffold(),
+      home: StartResponsiveLayout(
+        mobileScaffold: StartMobileScaffold(),
+        tabletScaffold: StartTabletScaffold(),
+        desktopScaffold: StartDesktopScaffold(),
       ),
       debugShowCheckedModeBanner: false
 
