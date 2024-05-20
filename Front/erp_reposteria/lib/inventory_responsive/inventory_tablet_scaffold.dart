@@ -1,3 +1,4 @@
+import 'package:erp_reposteria/constants.dart';
 import 'package:flutter/material.dart';
 class InventoryTabletScaffold extends StatefulWidget {
   const InventoryTabletScaffold({super.key});
@@ -9,6 +10,9 @@ class InventoryTabletScaffold extends StatefulWidget {
 class _InventoryTabletScaffoldState extends State<InventoryTabletScaffold> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: MyAppBar,
+      drawer: MyDrawer,
+    );
   }
 }

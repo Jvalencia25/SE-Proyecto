@@ -27,16 +27,26 @@ var MyDrawer = const Drawer(
             leading: Icon(Icons.account_circle_rounded),
             title: Text('Usuario'),
             textColor: Color.fromARGB(255, 164, 31, 53),
+            iconColor: Color.fromARGB(255, 164, 31, 53),
           ),
           ListTile(
             leading: Icon(Icons.business),
             title: Text('Sobre la empresa'),
-            textColor: Color.fromARGB(255, 164, 31, 53)
+            textColor: Color.fromARGB(255, 164, 31, 53),
+            iconColor: Color.fromARGB(255, 164, 31, 53),
           ),
           ListTile(
             leading: Icon(Icons.article_rounded),
             title: Text('Sobre el proyecto'),
-            textColor: Color.fromARGB(255, 164, 31, 53)
+            textColor: Color.fromARGB(255, 164, 31, 53),
+            iconColor: Color.fromARGB(255, 164, 31, 53),
           ),
+          Spacer(),
+          ListTile(
+            leading: Icon(Icons.exit_to_app),
+            title: Text('Salir'),
+            textColor: Color.fromARGB(255, 164, 31, 53),
+            iconColor: Color.fromARGB(255, 164, 31, 53),
+          )
         ],),
       );
