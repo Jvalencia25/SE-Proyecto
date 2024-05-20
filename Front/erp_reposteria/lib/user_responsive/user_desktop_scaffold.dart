@@ -21,7 +21,11 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
       appBar: MyAppBar,
       backgroundColor: MyDefaultBackround,
       body: Row(children: [
-        MyDrawer,
+        Builder(
+            builder: (BuildContext context) {
+              return buildDrawer(context);
+            },
+          ),
         Expanded(child: Column(
         children: [
           //4 box on the top

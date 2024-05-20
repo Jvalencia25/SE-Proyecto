@@ -14,7 +14,11 @@ class _OrderDesktopScaffoldState extends State<OrderDesktopScaffold> {
     return Scaffold(
       appBar: MyAppBar,
       backgroundColor: MyDefaultBackround,
-      drawer: MyDrawer,
+      drawer: Builder(
+        builder: (BuildContext context) {
+        return buildDrawer(context);
+    },
+  ),
     );
   }
 }

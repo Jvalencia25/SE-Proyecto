@@ -12,7 +12,11 @@ class _InventoryTabletScaffoldState extends State<InventoryTabletScaffold> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar,
-      drawer: MyDrawer,
+      drawer: Builder(
+        builder: (BuildContext context) {
+        return buildDrawer(context);
+    },
+  ),
     );
   }
 }

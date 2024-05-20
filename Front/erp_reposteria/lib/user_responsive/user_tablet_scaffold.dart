@@ -19,7 +19,11 @@ class _TabletScaffoldState extends State<TabletScaffold> {
     return Scaffold(
       appBar: MyAppBar,
       backgroundColor: MyDefaultBackround,
-      drawer: MyDrawer,
+      drawer: Builder(
+        builder: (BuildContext context) {
+        return buildDrawer(context);
+    },
+  ),
       body: Column(
         children: [
           //4 box on the top
