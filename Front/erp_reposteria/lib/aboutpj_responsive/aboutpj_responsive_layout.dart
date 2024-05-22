@@ -1,10 +1,28 @@
 import 'package:flutter/material.dart';
 
 class AboutpjResponsiveLayout extends StatelessWidget {
-  const AboutpjResponsiveLayout({super.key});
+  final Widget mobileScaffold;
+  final Widget tabletScaffold;
+  final Widget desktopScaffold;
+
+  AboutpjResponsiveLayout({
+    required this.mobileScaffold,
+    required this.tabletScaffold,
+    required this.desktopScaffold
+  });
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (constraints.maxWidth < 500) {
+          return mobileScaffold;
+        } else if (constraints.maxWidth < 900) {
+          return tabletScaffold;
+        } else {
+          return desktopScaffold;
+        }
+      },
+    );
   }
 }

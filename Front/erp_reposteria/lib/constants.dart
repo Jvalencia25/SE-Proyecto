@@ -1,6 +1,15 @@
+import 'package:erp_reposteria/aboutbn_responsive/aboutbn_desktop_scaffold.dart';
+import 'package:erp_reposteria/aboutbn_responsive/aboutbn_mobile_scaffold.dart';
 import 'package:erp_reposteria/aboutbn_responsive/aboutbn_responsive_layout.dart';
+import 'package:erp_reposteria/aboutbn_responsive/aboutbn_tablet_scaffold.dart';
+import 'package:erp_reposteria/aboutpj_responsive/aboutpj_desktop_scaffold.dart';
+import 'package:erp_reposteria/aboutpj_responsive/aboutpj_mobile_scaffold.dart';
 import 'package:erp_reposteria/aboutpj_responsive/aboutpj_responsive_layout.dart';
+import 'package:erp_reposteria/aboutpj_responsive/aboutpj_tablet_scaffold.dart';
+import 'package:erp_reposteria/contact_responsive/contact_desktop_scaffold.dart';
+import 'package:erp_reposteria/contact_responsive/contact_mobile_scaffold.dart';
 import 'package:erp_reposteria/contact_responsive/contact_responsive_layout.dart';
+import 'package:erp_reposteria/contact_responsive/contact_tablet_scaffold.dart';
 import 'package:erp_reposteria/login_responsive/login_responsive_layout.dart';
 import 'package:erp_reposteria/start_responsive/start_desktop_scaffold.dart';
 import 'package:erp_reposteria/start_responsive/start_mobile_scaffold.dart';
@@ -43,7 +52,11 @@ class MyStartAppBar extends AppBar {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const AboutbnResponsiveLayout()));
+                        builder: (context) => AboutbnResponsiveLayout(
+                          mobileScaffold: AboutbnMobileScaffold(),
+                          tabletScaffold: AboutbnTabletScaffold(),
+                          desktopScaffold: AboutbnDesktopScaffold(),
+                        )));
               },
               child: const Text('Sobre la empresa',
                   style: TextStyle(color: Color.fromARGB(255, 164, 31, 53))),
@@ -53,7 +66,11 @@ class MyStartAppBar extends AppBar {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const AboutpjResponsiveLayout()));
+                        builder: (context) => AboutpjResponsiveLayout(
+                          mobileScaffold: AboutpjMobileScaffold(),
+                          tabletScaffold: AboutpjTabletScaffold(),
+                          desktopScaffold: AboutpjDesktopScaffold(),
+                        )));
               },
               child: const Text('Sobre el proyecto',
                   style: TextStyle(color: Color.fromARGB(255, 164, 31, 53))),
@@ -63,7 +80,11 @@ class MyStartAppBar extends AppBar {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ContactResponsiveLayout()));
+                        builder: (context) => ContactResponsiveLayout(
+                          mobileScaffold: ContactMobileScaffold(),
+                          tabletScaffold: ContactTabletScaffold(),
+                          desktopScaffold: ContactDesktopScaffold(),
+                        )));
               },
               child: const Text('Contacto',
                   style: TextStyle(color: Color.fromARGB(255, 164, 31, 53))),
@@ -98,7 +119,11 @@ Widget buildDrawer(BuildContext context) {
           iconColor: Color.fromARGB(255, 164, 31, 53),
           onTap: () {
             // Al presionar el botón, nos lleva a la página de información sobre la empresa
-            Navigator.push(context, MaterialPageRoute(builder: (context) => AboutbnResponsiveLayout()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => AboutbnResponsiveLayout(
+              mobileScaffold: AboutbnMobileScaffold(),
+              tabletScaffold: AboutbnTabletScaffold(),
+              desktopScaffold: AboutbnDesktopScaffold(),
+            )));
           },
         ),
         ListTile(
@@ -108,7 +133,11 @@ Widget buildDrawer(BuildContext context) {
           iconColor: Color.fromARGB(255, 164, 31, 53),
           onTap: () {
             // Al presionar el botón, nos lleva a la página de información sobre el proyecto
-            Navigator.push(context, MaterialPageRoute(builder: (context) => AboutpjResponsiveLayout()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => AboutpjResponsiveLayout(
+              mobileScaffold: AboutpjMobileScaffold(),
+              tabletScaffold: AboutpjTabletScaffold(),
+              desktopScaffold: AboutpjDesktopScaffold(),
+            )));
           },
         ),
         Spacer(),

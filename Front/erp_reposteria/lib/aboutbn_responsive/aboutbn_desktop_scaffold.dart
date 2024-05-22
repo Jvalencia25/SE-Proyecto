@@ -1,3 +1,4 @@
+import 'package:erp_reposteria/constants.dart';
 import 'package:flutter/material.dart';
 
 class AboutbnDesktopScaffold extends StatefulWidget {
@@ -10,6 +11,9 @@ class AboutbnDesktopScaffold extends StatefulWidget {
 class _AboutbnDesktopScaffoldState extends State<AboutbnDesktopScaffold> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: MyStartAppBar(context),
+      backgroundColor: MyDefaultBackround,
+    );
   }
 }

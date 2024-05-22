@@ -1,3 +1,4 @@
+import 'package:erp_reposteria/constants.dart';
 import 'package:flutter/material.dart';
 
 class ContactDesktopScaffold extends StatefulWidget {
@@ -10,6 +11,9 @@ class ContactDesktopScaffold extends StatefulWidget {
 class _ContactDesktopScaffoldState extends State<ContactDesktopScaffold> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: MyStartAppBar(context),
+      backgroundColor: MyDefaultBackround,
+    );
   }
 }
