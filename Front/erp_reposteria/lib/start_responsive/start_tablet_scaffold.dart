@@ -13,7 +13,6 @@ class StartTabletScaffold extends StatefulWidget {
   //control de edición de texto
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
-  final codeController = TextEditingController();
 
   @override
   State<StartTabletScaffold> createState() => _StartTabletScaffoldState();
@@ -22,7 +21,6 @@ class StartTabletScaffold extends StatefulWidget {
 class _StartTabletScaffoldState extends State<StartTabletScaffold> {
   get usernameController => null;
   get passwordController => null;
-  get codeController => null;
 
   @override
   Widget build(BuildContext context) {
@@ -65,21 +63,6 @@ class _StartTabletScaffoldState extends State<StartTabletScaffold> {
           MyTextfield(
             controller: passwordController,
             hintText: 'Contraseña',
-            obscureText: true,
-          ),
-          const SizedBox(height: 20),
-
-          //código
-          const Text(
-            'Código suministrado por el administrador', 
-            style: TextStyle(
-              color: Color.fromARGB(255, 164, 31, 53),
-              fontSize: 16)),
-
-          const SizedBox(height: 20),
-          MyTextfield(
-            controller: codeController,
-            hintText: 'Código',
             obscureText: true,
           ),
           const SizedBox(height: 50),

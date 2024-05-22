@@ -23,6 +23,7 @@ var MyDefaultBackround = const Color.fromARGB(255, 242, 241, 209);
 
 // ignore: non_constant_identifier_names
 var MyAppBar = AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(255, 242, 241, 209),
         title: Text('La Dolce Vita', style: GoogleFonts.abrilFatface()),
         titleTextStyle: const TextStyle(
@@ -35,7 +36,7 @@ var MyAppBar = AppBar(
 
 // ignore: non_constant_identifier_names
 class MyStartAppBar extends AppBar {
-  MyStartAppBar(BuildContext context)
+  MyStartAppBar(BuildContext context, {super.key})
       : super(
         automaticallyImplyLeading: false,
           backgroundColor: const Color.fromARGB(255, 242, 241, 209),
@@ -101,7 +102,7 @@ Widget buildDrawer(BuildContext context) {
     elevation: 4,
     child: Column(
       children: [
-        DrawerHeader(child: Icon(Icons.favorite)),
+        const DrawerHeader(child: Icon(Icons.favorite)),
         ListTile(
           leading: Icon(Icons.account_circle_rounded),
           title: Text('Usuario'),
