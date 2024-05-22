@@ -54,9 +54,9 @@ class MyStartAppBar extends AppBar {
                     context,
                     MaterialPageRoute(
                         builder: (context) => AboutbnResponsiveLayout(
-                          mobileScaffold: AboutbnMobileScaffold(),
-                          tabletScaffold: AboutbnTabletScaffold(),
-                          desktopScaffold: AboutbnDesktopScaffold(),
+                          mobileScaffold: const AboutbnMobileScaffold(),
+                          tabletScaffold: const AboutbnTabletScaffold(),
+                          desktopScaffold: const AboutbnDesktopScaffold(),
                         )));
               },
               child: const Text('Sobre la empresa',
@@ -68,9 +68,9 @@ class MyStartAppBar extends AppBar {
                     context,
                     MaterialPageRoute(
                         builder: (context) => AboutpjResponsiveLayout(
-                          mobileScaffold: AboutpjMobileScaffold(),
-                          tabletScaffold: AboutpjTabletScaffold(),
-                          desktopScaffold: AboutpjDesktopScaffold(),
+                          mobileScaffold: const AboutpjMobileScaffold(),
+                          tabletScaffold: const AboutpjTabletScaffold(),
+                          desktopScaffold: const AboutpjDesktopScaffold(),
                         )));
               },
               child: const Text('Sobre el proyecto',
@@ -82,9 +82,9 @@ class MyStartAppBar extends AppBar {
                     context,
                     MaterialPageRoute(
                         builder: (context) => ContactResponsiveLayout(
-                          mobileScaffold: ContactMobileScaffold(),
-                          tabletScaffold: ContactTabletScaffold(),
-                          desktopScaffold: ContactDesktopScaffold(),
+                          mobileScaffold: const ContactMobileScaffold(),
+                          tabletScaffold: const ContactTabletScaffold(),
+                          desktopScaffold: const ContactDesktopScaffold(),
                         )));
               },
               child: const Text('Contacto',
@@ -103,16 +103,6 @@ Widget buildDrawer(BuildContext context) {
     child: Column(
       children: [
         const DrawerHeader(child: Icon(Icons.favorite)),
-        ListTile(
-          leading: Icon(Icons.account_circle_rounded),
-          title: Text('Usuario'),
-          textColor: Color.fromARGB(255, 164, 31, 53),
-          iconColor: Color.fromARGB(255, 164, 31, 53),
-          onTap: () {
-            // Al presionar el botón, nos lleva a la página del usuario logeado
-            Navigator.push(context, MaterialPageRoute(builder: (context) => LoginResponsiveLayout()));
-          },
-        ),
         ListTile(
           leading: Icon(Icons.business),
           title: Text('Sobre la empresa'),
