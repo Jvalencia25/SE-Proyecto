@@ -1,4 +1,4 @@
-package com.mrp.backend.backend.models.entities;
+package com.mrp.backend.backend.models.inputModels;
 
 public class DataLogin {
     private String correo;

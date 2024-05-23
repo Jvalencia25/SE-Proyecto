@@ -4,6 +4,8 @@ import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import java.util.Date;
 
+import com.mrp.backend.backend.models.entities.keys.InventarioKey;
+
 @Entity
 public class Inventario {
 

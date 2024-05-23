@@ -1,5 +1,7 @@
 package com.mrp.backend.backend.models.entities;
 
+import com.mrp.backend.backend.models.entities.keys.IngredienteProductoKey;
+
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
@@ -14,7 +16,7 @@ public class IngredienteProducto {
     private Producto producto;
 
     @ManyToOne
-    private Ingrediente ingrediente;
+    private Insumo insumo;
 
     public IngredienteProductoKey getId() {
         return id;
@@ -32,11 +34,11 @@ public class IngredienteProducto {
         this.producto = producto;
     }
 
-    public Ingrediente getIngrediente() {
-        return ingrediente;
+    public Insumo getInsumo() {
+        return insumo;
     }
 
-    public void setIngrediente(Ingrediente ingrediente) {
-        this.ingrediente = ingrediente;
+    public void setIngrediente(Insumo ingrediente) {
+        this.insumo = ingrediente;
     }
 }

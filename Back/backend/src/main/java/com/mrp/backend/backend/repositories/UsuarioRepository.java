@@ -1,4 +1,5 @@
 package com.mrp.backend.backend.repositories;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Modifying;
@@ -10,6 +11,10 @@ import org.springframework.transaction.annotation.Transactional;
 import com.mrp.backend.backend.models.entities.Usuario;
 
 public interface UsuarioRepository extends CrudRepository<Usuario, Long>{
+
+    @Transactional(readOnly = true)
+    @Query(value="select * from usuario u where u.activo = true", nativeQuery = true)
+    List<Usuario> findAll();
 
     @Query(value="select * from usuario u where u.correo =:correo fetch first 1 row only", nativeQuery = true)
     Optional<Usuario> findByCorreo(@Param("correo") String correo);

@@ -1,5 +1,7 @@
 package com.mrp.backend.backend.models.entities;
 
+import com.mrp.backend.backend.models.entities.keys.ProductosPedidoKey;
+
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;

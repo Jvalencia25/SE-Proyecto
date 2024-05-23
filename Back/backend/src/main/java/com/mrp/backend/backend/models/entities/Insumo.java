@@ -1,14 +1,16 @@
 package com.mrp.backend.backend.models.entities;
 
-import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Insumo {
 
-    @EmbeddedId
-    private InsumoKey id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String nombre;
 
@@ -20,11 +22,11 @@ public class Insumo {
 
     // Getters y Setters
 
-    public InsumoKey getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(InsumoKey id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

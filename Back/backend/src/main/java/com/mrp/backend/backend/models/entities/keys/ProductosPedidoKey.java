@@ -1,4 +1,4 @@
-package com.mrp.backend.backend.models.entities;
+package com.mrp.backend.backend.models.entities.keys;
 
 import java.io.Serializable;
 import jakarta.persistence.Embeddable;

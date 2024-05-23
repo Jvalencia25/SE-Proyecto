@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mrp.backend.backend.services.UsuarioService;
 import com.mrp.backend.backend.config.exception;
-import com.mrp.backend.backend.models.entities.DataLogin;
 import com.mrp.backend.backend.models.entities.Usuario;
-import org.springframework.web.bind.annotation.RequestParam;
+import com.mrp.backend.backend.models.inputModels.DataLogin;
+import com.mrp.backend.backend.models.inputModels.DeleteLogin;
+import com.mrp.backend.backend.models.inputModels.IngresoUsuario;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,8 +50,9 @@ public class UsuarioController {
     
 
     @PostMapping
-    public ResponseEntity<?> create(@RequestBody Usuario user) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(service.save(user));
+    public ResponseEntity<?> create(@RequestBody IngresoUsuario datos) {
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.save(datos));
     }
 
     @PostMapping("/login")
@@ -63,12 +66,13 @@ public class UsuarioController {
         return ResponseEntity.notFound().build();
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<?> remove(@PathVariable Long id) {
-        Optional<Usuario> o = service.findbyId(id);
+    @DeleteMapping
+    public ResponseEntity<?> remove(@RequestBody DeleteLogin datos) {
+        
+        Optional<Usuario> o = service.findbyId(datos.getId());
 
         if (o.isPresent()){
-            service.remove(id);
+            service.remove(datos);
             return ResponseEntity.ok("Usuario eliminado");
         }
         return ResponseEntity.notFound().build();

@@ -1,4 +1,4 @@
-package com.mrp.backend.backend.models.entities;
+package com.mrp.backend.backend.models.entities.keys;
 
 import java.io.Serializable;
 import jakarta.persistence.Embeddable;
@@ -7,7 +7,7 @@ import jakarta.persistence.Embeddable;
 public class InsumoKey implements Serializable {
 
     private Long id;
-    private String nombre;
+
 
     // Getters y Setters
 
@@ -19,14 +19,6 @@ public class InsumoKey implements Serializable {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -35,13 +27,13 @@ public class InsumoKey implements Serializable {
         InsumoKey that = (InsumoKey) o;
 
         if (!id.equals(that.id)) return false;
-        return nombre.equals(that.nombre);
+        return id.equals(that.id);
     }
 
     @Override
     public int hashCode() {
         int result = id.hashCode();
-        result = 31 * result + nombre.hashCode();
+        result = 31 * result + id.hashCode();
         return result;
     }
 }
