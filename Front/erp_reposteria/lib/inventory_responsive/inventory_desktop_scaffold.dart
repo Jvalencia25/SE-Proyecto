@@ -14,11 +14,10 @@ class _InventoryDesktopScaffoldState extends State<InventoryDesktopScaffold> {
     return Scaffold(
       appBar: MyAppBar,
       backgroundColor: MyDefaultBackround,
-      drawer: Builder(
-        builder: (BuildContext context) {
-        return buildDrawer(context);
-    },
-  ),
+      drawer: buildDrawer(context),
+      body: Column(
+        mainAxisSize: MainAxisSize.max,
+      ),
     );
   }
 }

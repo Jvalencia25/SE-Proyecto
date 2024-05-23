@@ -14,11 +14,7 @@ class _OrderMobileScaffoldState extends State<OrderMobileScaffold> {
     return Scaffold(
       appBar: MyAppBar,
       backgroundColor: MyDefaultBackround,
-      drawer: Builder(
-        builder: (BuildContext context) {
-        return buildDrawer(context);
-    },
-  ),
+      drawer: buildDrawer(context)
     );
   }
 }

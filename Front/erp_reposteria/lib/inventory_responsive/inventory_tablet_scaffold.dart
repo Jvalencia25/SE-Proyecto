@@ -12,11 +12,8 @@ class _InventoryTabletScaffoldState extends State<InventoryTabletScaffold> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar,
-      drawer: Builder(
-        builder: (BuildContext context) {
-        return buildDrawer(context);
-    },
-  ),
+      backgroundColor: MyDefaultBackround,
+      drawer: buildDrawer(context)
     );
   }
 }

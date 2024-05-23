@@ -14,11 +14,7 @@ class _RegisterDesktopScaffoldState extends State<RegisterDesktopScaffold> {
     return Scaffold(
       appBar: MyAppBar,
       backgroundColor: MyDefaultBackround,
-      drawer: Builder(
-        builder: (BuildContext context) {
-        return buildDrawer(context);
-    },
-  ),
+      drawer: buildDrawer(context)
     );
   }
 }
