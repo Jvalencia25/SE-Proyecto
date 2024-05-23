@@ -4,6 +4,7 @@ import 'package:erp_reposteria/inventory_responsive/inventory_desktop_scaffold.d
 import 'package:erp_reposteria/inventory_responsive/inventory_responsive_layout.dart';
 import 'package:erp_reposteria/order_responsive/order_desktop_scaffold.dart';
 import 'package:erp_reposteria/order_responsive/order_responsive_layout.dart';
+import 'package:erp_reposteria/register_responsive/register_desktop_scaffold.dart';
 import 'package:erp_reposteria/register_responsive/register_responsive_layout.dart';
 import 'package:erp_reposteria/util/my_box.dart';
 import 'package:erp_reposteria/util/my_box_data.dart';
@@ -61,7 +62,9 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
                       );
                       break;
                     case 3:
-                      targetScreen = RegisterResponsiveLayout();
+                      targetScreen = RegisterResponsiveLayout(
+                        desktopScaffold: RegisterDesktopScaffold(),
+                      );
                       break;
                     default:
                       targetScreen = InventoryResponsiveLayout(

@@ -7,6 +7,7 @@ class InventoryDesktopScaffold extends StatefulWidget {
   InventoryDesktopScaffold({super.key});
 
   final cantidadController = TextEditingController();
+  final proveedorController = TextEditingController();
 
   @override
   State<InventoryDesktopScaffold> createState() => _InventoryDesktopScaffoldState();
@@ -32,6 +33,7 @@ class _InventoryDesktopScaffoldState extends State<InventoryDesktopScaffold> {
   String? _selectedAnoVal = "";
   
   get cantidadController => null;
+  get proveedorController => null;
 
   @override
   Widget build(BuildContext context) {
@@ -233,7 +235,7 @@ class _InventoryDesktopScaffoldState extends State<InventoryDesktopScaffold> {
                       ]
                     ),
                       child: TextField(
-                        controller: cantidadController,
+                        controller: proveedorController,
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
                           hintText: 'Nombre del proveedor',
