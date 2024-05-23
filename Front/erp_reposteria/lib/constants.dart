@@ -6,10 +6,6 @@ import 'package:erp_reposteria/aboutpj_responsive/aboutpj_desktop_scaffold.dart'
 import 'package:erp_reposteria/aboutpj_responsive/aboutpj_mobile_scaffold.dart';
 import 'package:erp_reposteria/aboutpj_responsive/aboutpj_responsive_layout.dart';
 import 'package:erp_reposteria/aboutpj_responsive/aboutpj_tablet_scaffold.dart';
-import 'package:erp_reposteria/contact_responsive/contact_desktop_scaffold.dart';
-import 'package:erp_reposteria/contact_responsive/contact_mobile_scaffold.dart';
-import 'package:erp_reposteria/contact_responsive/contact_responsive_layout.dart';
-import 'package:erp_reposteria/contact_responsive/contact_tablet_scaffold.dart';
 import 'package:erp_reposteria/start_responsive/start_desktop_scaffold.dart';
 import 'package:erp_reposteria/start_responsive/start_mobile_scaffold.dart';
 import 'package:erp_reposteria/start_responsive/start_responsive_layout.dart';
@@ -73,20 +69,6 @@ class MyStartAppBar extends AppBar {
                         )));
               },
               child: const Text('Sobre el proyecto',
-                  style: TextStyle(color: Color.fromARGB(255, 164, 31, 53))),
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ContactResponsiveLayout(
-                          mobileScaffold: const ContactMobileScaffold(),
-                          tabletScaffold: const ContactTabletScaffold(),
-                          desktopScaffold: const ContactDesktopScaffold(),
-                        )));
-              },
-              child: const Text('Contacto',
                   style: TextStyle(color: Color.fromARGB(255, 164, 31, 53))),
             ),
           ],
