@@ -1,6 +1,9 @@
 import 'package:erp_reposteria/catalogue_responsive/catalogue_responsive_layout.dart';
 import 'package:erp_reposteria/constants.dart';
+import 'package:erp_reposteria/inventory_responsive/inventory_desktop_scaffold.dart';
+import 'package:erp_reposteria/inventory_responsive/inventory_mobile_scaffold.dart';
 import 'package:erp_reposteria/inventory_responsive/inventory_responsive_layout.dart';
+import 'package:erp_reposteria/inventory_responsive/inventory_tablet_scaffold.dart';
 import 'package:erp_reposteria/order_responsive/order_responsive_layout.dart';
 import 'package:erp_reposteria/register_responsive/register_responsive_layout.dart';
 import 'package:erp_reposteria/util/my_box.dart';
@@ -45,7 +48,11 @@ class _MobileScaffoldState extends State<MobileScaffold> {
                   Widget targetScreen;
                   switch(index){
                     case 0:
-                      targetScreen = InventoryResponsiveLayout();
+                      targetScreen = InventoryResponsiveLayout(
+                        mobileScaffold: InventoryMobileScaffold(),
+                        tabletScaffold: InventoryTabletScaffold(),
+                        desktopScaffold: InventoryDesktopScaffold(),
+                      );
                       break;
                     case 1:
                       targetScreen = CatalogueResponsiveLayout();
@@ -57,7 +64,11 @@ class _MobileScaffoldState extends State<MobileScaffold> {
                       targetScreen = RegisterResponsiveLayout();
                       break;
                     default:
-                      targetScreen = InventoryResponsiveLayout();
+                      targetScreen = InventoryResponsiveLayout(
+                        mobileScaffold: InventoryMobileScaffold(),
+                        tabletScaffold: InventoryTabletScaffold(),
+                        desktopScaffold: InventoryDesktopScaffold(),
+                      );
                   }
                   Navigator.push(context, MaterialPageRoute(builder: (context) => targetScreen));
                  },

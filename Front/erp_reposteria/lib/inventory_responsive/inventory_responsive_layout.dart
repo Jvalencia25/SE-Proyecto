@@ -1,4 +1,3 @@
-import 'package:erp_reposteria/inventory_responsive/inventory_desktop_scaffold.dart';
 import 'package:erp_reposteria/inventory_responsive/inventory_mobile_scaffold.dart';
 import 'package:erp_reposteria/inventory_responsive/inventory_tablet_scaffold.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +10,7 @@ class InventoryResponsiveLayout extends StatelessWidget {
   InventoryResponsiveLayout({
     this.mobileScaffold = const InventoryMobileScaffold(),
     this.tabletScaffold = const InventoryTabletScaffold(),
-    this.desktopScaffold = const InventoryDesktopScaffold(),
+    required this.desktopScaffold,
   });
 
   @override
