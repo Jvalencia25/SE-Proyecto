@@ -85,8 +85,8 @@ class _InventoryDesktopScaffoldState extends State<InventoryDesktopScaffold> {
               children: [
                 Text(
                   'Agregar nuevo registro',
-                  style: GoogleFonts.average(),
-                  textScaler: const TextScaler.linear(1.2),
+                  style: GoogleFonts.average(color: const Color.fromARGB(255, 164, 31, 53),),
+                  textScaler: const TextScaler.linear(2),
                   )
               ],
             ),
