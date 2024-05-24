@@ -108,10 +108,10 @@ ALTER TABLE "pedido" ADD CONSTRAINT "pedido_id_empleado_foreign" FOREIGN KEY ("i
 
 -- Añadir datos de ejemplo
 INSERT INTO "usuario" ("nombre", "correo", "contraseña", "nivel_acceso") VALUES
-('Juan Perez', 'juan.perez@example.com', 'contraseña123', 'administrador'),
+('Juan Perez', 'juan.perez@example.com', 'contraseña123', 'admin'),
 ('Maria Gomez', 'maria.gomez@example.com', 'password456', 'usuario'),
 ('Carlos Lopez', 'carlos.lopez@example.com', 'clave789', 'usuario'),
-('Ana Torres', 'ana.torres@example.com', 'mipass101', 'moderador'),
+('Ana Torres', 'ana.torres@example.com', 'mipass101', 'admin'),
 ('Luis Ramirez', 'luis.ramirez@example.com', 'mypassword202', 'usuario');
 
 INSERT INTO "insumo" ("nombre", "unidad_medida", "precio", "proveedor") VALUES
@@ -203,54 +203,36 @@ VALUES
 INSERT INTO inventario (id_insumo, fecha_ingreso, cantidad, fecha_vencimiento)
 VALUES 
     -- Pie de queso
-    (1, '2024-05-20', 500.00, '2024-06-01'),   -- queso crema
-    (2, '2024-05-20', 3.00, NULL),             -- huevos
-    (3, '2024-05-20', 200.00, '2024-06-15'),   -- azúcar
-    (4, '2024-05-20', 200.00, NULL),           -- galletas
+    (1, '2024-05-24', 1000.00, '2024-06-01'),   -- queso crema
+    (2, '2024-05-24', 30.00, NULL),             -- huevos
+    (3, '2024-05-24', 2000.00, '2024-06-15'),   -- azúcar
+    (4, '2024-05-24', 2000.00, NULL),           -- galletas
     
     -- Pie de limón
-    (5, '2024-05-21', 4.00, '2024-06-10'),     -- limones
-    (2, '2024-05-21', 4.00, NULL),             -- huevos
-    (6, '2024-05-21', 397.00, '2024-06-20'),   -- leche condensada
-    (4, '2024-05-21', 200.00, NULL),           -- galletas
+    (5, '2024-05-24', 40.00, '2024-06-10'),     -- limones
+    (6, '2024-05-21', 3970.00, '2024-06-20'),   -- leche condensada
     
     -- Pie de jamón y queso
-    (7, '2024-05-22', 200.00, '2024-06-05'),   -- jamón
-    (8, '2024-05-22', 200.00, '2024-06-08'),   -- queso
-    (2, '2024-05-22', 3.00, NULL),             -- huevos
-    (9, '2024-05-22', 200.00, '2024-06-12'),   -- crema de leche
+    (7, '2024-05-22', 2000.00, '2024-06-05'),   -- jamón
+    (8, '2024-05-22', 2000.00, '2024-06-08'),   -- queso
+    (9, '2024-05-22', 2000.00, '2024-06-12'),   -- crema de leche
     
     -- Pastel de chocolate
-    (10, '2024-05-23', 200.00, '2024-06-03'),  -- chocolate para hornear
-    (2, '2024-05-23', 4.00, NULL),             -- huevos
-    (11, '2024-05-23', 200.00, '2024-06-18'),  -- harina
-    (3, '2024-05-23', 200.00, NULL),           -- azúcar
+    (10, '2024-05-23', 2000.00, '2024-06-03'),  -- chocolate para hornear
+    (11, '2024-05-23', 2000.00, '2024-06-18'),  -- harina
     
     -- Pie de pollo
-    (12, '2024-05-24', 300.00, '2024-06-07'),  -- pollo desmenuzado
-    (9, '2024-05-24', 200.00, '2024-06-25'),   -- crema de leche
-    (13, '2024-05-24', 150.00, NULL),          -- verduras
-    (18, '2024-05-24', 1.00, '2024-06-14'),    -- masa de hojaldre
+    (12, '2024-05-24', 3000.00, '2024-06-07'),  -- pollo desmenuzado
+    (13, '2024-05-24', 1500.00, NULL),          -- verduras
+    (18, '2024-05-24', 10.00, '2024-06-14'),    -- masa de hojaldre
     
     -- Croissants de chocolate x10
-    (14, '2024-05-25', 250.00, '2024-06-09'),  -- mantequilla
-    (11, '2024-05-25', 500.00, '2024-06-04'),  -- harina
-    (15, '2024-05-25', 50.00, NULL),           -- polvo para hornear
-    (10, '2024-05-25', 200.00, '2024-06-22'),  -- chocolate
-    (17, '2024-05-25', 200.00, NULL),          -- leche
+    (14, '2024-05-25', 2500.00, '2024-06-09'),  -- mantequilla
+    (15, '2024-05-25', 500.00, NULL),           -- polvo para hornear
+    (17, '2024-05-25', 2000.00, NULL),          -- leche
     
     -- Churros de arequipe x10
-    (11, '2024-05-26', 250.00, '2024-06-11'),  -- harina
-    (17, '2024-05-26', 250.00, '2024-06-17'),  -- leche
-    (14, '2024-05-26', 200.00, '2024-06-19'),  -- mantequilla
-    (15, '2024-05-26', 50.00, NULL),           -- polvo para hornear
-    (16, '2024-05-26', 300.00, '2024-06-23'),  -- arequipe
-    
-    -- Torta fría de tres leches
-    (17, '2024-05-27', 354.00, '2024-06-02'),  -- leche evaporada
-    (6, '2024-05-27', 397.00, '2024-06-13'),   -- leche condensada
-    (9, '2024-05-27', 250.00, '2024-06-16'),   -- crema de leche
-    (18, '2024-05-27', 1.00, NULL);            -- bizcocho
+    (16, '2024-05-26', 3000.00, '2024-06-23'),  -- arequipe
 
     -- Insertar datos en la tabla pedido
 INSERT INTO pedido (fecha, direccion, nombre_cliente, id_empleado)
