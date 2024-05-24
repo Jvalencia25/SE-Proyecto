@@ -13,7 +13,7 @@ public class ProductosPedido {
     private ProductosPedidoKey id;
 
     @ManyToOne
-    private pedido pedido;
+    private Pedido pedido;
 
     @ManyToOne
     private Producto producto;
@@ -26,11 +26,11 @@ public class ProductosPedido {
         this.id = id;
     }
 
-    public pedido getPedido() {
+    public Pedido getPedido() {
         return pedido;
     }
 
-    public void setPedido(pedido pedido) {
+    public void setPedido(Pedido pedido) {
         this.pedido = pedido;
     }
 

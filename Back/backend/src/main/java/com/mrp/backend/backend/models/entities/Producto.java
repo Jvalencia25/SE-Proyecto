@@ -18,7 +18,7 @@ public class Producto {
 
     private String instrucciones;
 
-    private double precio;
+    private String precio;
 
     private String categoria;
 
@@ -58,11 +58,11 @@ public class Producto {
         this.instrucciones = instrucciones;
     }
 
-    public double getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
     }
 

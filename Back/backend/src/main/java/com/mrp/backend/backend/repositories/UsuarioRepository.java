@@ -23,4 +23,7 @@ public interface UsuarioRepository extends CrudRepository<Usuario, Long>{
     @Transactional
     @Query(value="UPDATE usuario SET activo = FALSE WHERE id = :id", nativeQuery = true)
     void remove(@Param("id") Long id);
+
+    @Query(value="select * from usuario u where u.nombre =:nombre fetch first 1 row only", nativeQuery = true)
+    Optional<Usuario> findByName(@Param("nombre") String nombre);
 }

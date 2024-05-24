@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class pedido {
+public class Pedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,7 +15,7 @@ public class pedido {
 
     private Date fecha;
 
-    private String estado;
+    private String direccion;
 
     private String nombreCliente;
 
@@ -39,12 +39,12 @@ public class pedido {
         this.fecha = fecha;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public String getNombreCliente() {

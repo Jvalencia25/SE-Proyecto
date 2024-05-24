@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,10 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mrp.backend.backend.services.UsuarioService;
 import com.mrp.backend.backend.config.exception;
+import com.mrp.backend.backend.models.APIModels.DataLogin;
+import com.mrp.backend.backend.models.APIModels.DeleteLogin;
+import com.mrp.backend.backend.models.APIModels.IngresoUsuario;
 import com.mrp.backend.backend.models.entities.Usuario;
-import com.mrp.backend.backend.models.inputModels.DataLogin;
-import com.mrp.backend.backend.models.inputModels.DeleteLogin;
-import com.mrp.backend.backend.models.inputModels.IngresoUsuario;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,6 +29,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin(origins="http://localhost:52944")
 public class UsuarioController {
 
     @Autowired
@@ -86,8 +88,5 @@ public class UsuarioController {
             return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
-    
-    
-    
     
 }

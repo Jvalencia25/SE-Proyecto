@@ -1,4 +1,4 @@
-package com.mrp.backend.backend.models.inputModels;
+package com.mrp.backend.backend.models.APIModels;
 
 public class IngresoUsuario {
     private Long id;

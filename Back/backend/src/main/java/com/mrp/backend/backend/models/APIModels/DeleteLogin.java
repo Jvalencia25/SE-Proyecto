@@ -1,4 +1,4 @@
-package com.mrp.backend.backend.models.inputModels;
+package com.mrp.backend.backend.models.APIModels;
 
 public class DeleteLogin {
     private Long id;

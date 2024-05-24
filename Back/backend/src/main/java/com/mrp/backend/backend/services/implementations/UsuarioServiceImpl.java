@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.mrp.backend.backend.config.exception;
+import com.mrp.backend.backend.models.APIModels.DeleteLogin;
+import com.mrp.backend.backend.models.APIModels.IngresoUsuario;
 import com.mrp.backend.backend.models.entities.Usuario;
-import com.mrp.backend.backend.models.inputModels.DeleteLogin;
-import com.mrp.backend.backend.models.inputModels.IngresoUsuario;
 import com.mrp.backend.backend.repositories.UsuarioRepository;
 import com.mrp.backend.backend.services.UsuarioService;
 
@@ -107,6 +107,11 @@ public class UsuarioServiceImpl implements UsuarioService{
     @Transactional(readOnly = true)
     public Optional<Usuario> findbyCorreo(String correo) {
         return repository.findByCorreo(correo);
+    }
+
+    @Override
+    public Optional<Usuario> findbyName(String name) {
+        return repository.findByName(name);
     }
 
 }

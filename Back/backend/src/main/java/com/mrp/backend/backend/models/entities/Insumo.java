@@ -16,7 +16,7 @@ public class Insumo {
 
     private String unidadMedida;
 
-    private double precio;
+    private String precio;
 
     private String proveedor;
 
@@ -46,11 +46,11 @@ public class Insumo {
         this.unidadMedida = unidadMedida;
     }
 
-    public double getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
     }
 

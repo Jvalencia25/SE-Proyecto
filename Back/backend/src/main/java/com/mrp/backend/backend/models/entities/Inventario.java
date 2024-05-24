@@ -2,6 +2,8 @@ package com.mrp.backend.backend.models.entities;
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
+
+import java.math.BigDecimal;
 import java.util.Date;
 
 import com.mrp.backend.backend.models.entities.keys.InventarioKey;
@@ -12,7 +14,7 @@ public class Inventario {
     @EmbeddedId
     private InventarioKey id;
 
-    private int cantidad;
+    private BigDecimal cantidad;
 
     private Date fechaVencimiento;
 
@@ -26,11 +28,11 @@ public class Inventario {
         this.id = id;
     }
 
-    public int getCantidad() {
+    public BigDecimal getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(int cantidad) {
+    public void setCantidad(BigDecimal cantidad) {
         this.cantidad = cantidad;
     }
 
