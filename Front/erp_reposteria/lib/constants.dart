@@ -7,9 +7,7 @@ import 'package:erp_reposteria/aboutpj_responsive/aboutpj_mobile_scaffold.dart';
 import 'package:erp_reposteria/aboutpj_responsive/aboutpj_responsive_layout.dart';
 import 'package:erp_reposteria/aboutpj_responsive/aboutpj_tablet_scaffold.dart';
 import 'package:erp_reposteria/start_responsive/start_desktop_scaffold.dart';
-import 'package:erp_reposteria/start_responsive/start_mobile_scaffold.dart';
 import 'package:erp_reposteria/start_responsive/start_responsive_layout.dart';
-import 'package:erp_reposteria/start_responsive/start_tablet_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -124,8 +122,6 @@ Widget buildDrawer(BuildContext context) {
               context, 
               MaterialPageRoute(
                 builder: (context) => StartResponsiveLayout(
-                  mobileScaffold: StartMobileScaffold(),
-                  tabletScaffold: StartTabletScaffold(),
                   desktopScaffold: StartDesktopScaffold(),
                   )
                 )
