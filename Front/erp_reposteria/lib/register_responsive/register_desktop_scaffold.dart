@@ -347,7 +347,7 @@ class _RegisterDesktopScaffoldState extends State<RegisterDesktopScaffold> {
                     child: PaginatedDataTable(
                       columns: const [
                         DataColumn(label: Text('Permisos')),
-                        DataColumn(label: Text('Nombnre')),
+                        DataColumn(label: Text('Nombre')),
                         DataColumn(label: Text('correo')),
                       ],
                       source: _dataSource,

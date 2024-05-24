@@ -94,7 +94,7 @@ class _OrderDesktopScaffoldState extends State<OrderDesktopScaffold> {
             
             //Seleccionar suministro
             Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 24),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -148,60 +148,6 @@ class _OrderDesktopScaffoldState extends State<OrderDesktopScaffold> {
                 ),
               ),
         
-            //cantidad
-            Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24, 24, 24, 24),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Cantidad',
-                      style: GoogleFonts.average(),
-                      textScaler: const TextScaler.linear(1.2),
-                      ),
-        
-                    const SizedBox(width: 20),
-        
-                    Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(8),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 1,
-                            blurRadius: 1,
-                            offset: const Offset(0, 1)
-                          )
-                        ]
-                      ),
-                        child: TextField(
-                          controller: cantidadController,
-                          textAlign: TextAlign.center,
-                          decoration: InputDecoration(
-                            hintText: 'Cantidad ingresada',
-                            hintStyle: GoogleFonts.average(),
-                            border: const UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.transparent),
-                            ),
-                            enabledBorder: const UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.transparent),
-                            ),
-                            focusedBorder: const UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.transparent),
-                            )
-                          ),
-                        ),
-                      ),
-                    )
-        
-                    
-        
-                  ],
-                ),
-              ),
         
             //Seleccionar vendedor
             Padding(
