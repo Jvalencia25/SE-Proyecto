@@ -21,8 +21,23 @@ class _OrderDesktopScaffoldState extends State<OrderDesktopScaffold> {
   }
 
   //variables
-    final _productosList = ["Item 1", "Item 2", "Item 3"];
-    final _vendedoresList = ["Vendedor 1", "Vendedor 2", "Vendedor 3"];
+    final _productosList = [
+      "Pie de queso", 
+      "Pie de limón", 
+      "Pie de jamón y queso",
+      "Pastel de chocolate",
+      "Pie de pollo",
+      "Croissants de chocolate x10",
+      "Churros de arequipe x10",
+      "torta fría de tres leches"
+      ];
+    final _vendedoresList = [
+      "Juan Perez", 
+      "Maria Gomez", 
+      "Calos Lopez",
+      "Ana Torres",
+      "Luis Ramirez"
+      ];
     String? _selectedProductoVal = "";
     String? _selectedVendedorVal = "";
 
@@ -324,7 +339,7 @@ class _OrderDesktopScaffoldState extends State<OrderDesktopScaffold> {
                 children: [
                   ElevatedButton(
                       onPressed: () {
-                        Navigator.pop(context);
+
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color.fromARGB(255, 164, 31, 53),

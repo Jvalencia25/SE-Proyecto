@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../api_service.dart'; // Asegúrate de importar tu servicio
+import 'package:erp_reposteria/constants.dart';
+
+
 
 class InventoryDesktopScaffold extends StatefulWidget {
   InventoryDesktopScaffold({super.key});
@@ -16,7 +19,27 @@ class _InventoryDesktopScaffoldState extends State<InventoryDesktopScaffold> {
   final ApiService apiService = ApiService();
   final InventoryDataSource _dataSource = InventoryDataSource();
 
-  final _suministrosList = ["Item 1", "Item 2", "Item 3"];
+  final _suministrosList = [
+    "Queso crema", 
+    "Huevos", 
+    "Azúcar",
+    "Galletas",
+    "Limones",
+    "Leche condensada",
+    "Jamón",
+    "Queso",
+    "Chocolate para hornear",
+    "Harina",
+    "Pollo desmenuzado",
+    "Verduras",
+    "Mantequilla",
+    "Polvo para hornear",
+    "Arquipe",
+    "Leche evaporada",
+    "Crema de leche",
+    "Bizcocho",
+    "Masa de hojaldre"
+    ];
   final _diasList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
   final _mesList = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
   final _anoList = ["2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034"];
@@ -84,9 +107,9 @@ class _InventoryDesktopScaffoldState extends State<InventoryDesktopScaffold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Inventario'),
-      ),
+      appBar: MyAppBar,
+      backgroundColor: MyDefaultBackround,
+      drawer: buildDrawer(context),
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -100,6 +123,7 @@ class _InventoryDesktopScaffoldState extends State<InventoryDesktopScaffold> {
                   Text(
                     'Inventario',
                     style: GoogleFonts.abrilFatface(),
+                    textScaler: const TextScaler.linear(3),
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -556,19 +580,59 @@ class _InventoryDesktopScaffoldState extends State<InventoryDesktopScaffold> {
 class InventoryDataSource extends DataTableSource {
   final List<Map<String, dynamic>> _data = [
     {
-      'suministro': 'Harina',
-      'cantidad': '10',
+      'suministro': 'Queso crema',
+      'cantidad': '100',
       'unidadMedida': 'kg',
-      'proveedor': 'Proveedor A',
-      'fechaIngreso': '01/01/2024',
-      'fechaVencimiento': '2024-05-12'
+      'proveedor': 'Quesos Ricos',
+      'fechaIngreso': '2024-08-1',
+      'fechaVencimiento': '2024-09-1'
     },
     {
       'suministro': 'Azúcar',
-      'cantidad': '5',
+      'cantidad': '50',
       'unidadMedida': 'kg',
-      'proveedor': 'Proveedor B',
-      'fechaIngreso': '01/01/2024',
+      'proveedor': 'Dulces S.A.',
+      'fechaIngreso': '2024-03-1',
+      'fechaVencimiento': '2024-06-15'
+    },
+    {
+      'suministro': 'Galletas',
+      'cantidad': '300',
+      'unidadMedida': 'g',
+      'proveedor': 'Galletas del Valle',
+      'fechaIngreso': '2024-03-1',
+      'fechaVencimiento': '2024-06-15'
+    },
+    {
+      'suministro': 'Arequipe',
+      'cantidad': '6000',
+      'unidadMedida': 'g',
+      'proveedor': 'Dulces S.A.',
+      'fechaIngreso': '2024-03-1',
+      'fechaVencimiento': '2024-06-15'
+    },
+    {
+      'suministro': 'Crema de leche',
+      'cantidad': '250',
+      'unidadMedida': 'ml',
+      'proveedor': 'Lácteos S.A.',
+      'fechaIngreso': '2024-03-1',
+      'fechaVencimiento': '2024-06-15'
+    },
+    {
+      'suministro': 'Leche evaporada',
+      'cantidad': '5000',
+      'unidadMedida': 'ml',
+      'proveedor': 'Lácteos S.A.',
+      'fechaIngreso': '2024-03-1',
+      'fechaVencimiento': '2024-06-15'
+    },
+    {
+      'suministro': 'Mantequilla',
+      'cantidad': '50',
+      'unidadMedida': 'g',
+      'proveedor': 'Lácteos S.A.',
+      'fechaIngreso': '2024-03-1',
       'fechaVencimiento': '2024-06-15'
     },
   ];

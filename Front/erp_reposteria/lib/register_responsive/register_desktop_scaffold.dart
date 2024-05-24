@@ -324,7 +324,6 @@ class _RegisterDesktopScaffoldState extends State<RegisterDesktopScaffold> {
                 children: [
                   ElevatedButton(
                       onPressed: () {
-                        Navigator.pop(context);
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color.fromARGB(255, 164, 31, 53),
@@ -369,12 +368,32 @@ class InventoryDataSource extends DataTableSource {
     {
       'permisos': 'Administrador',
       'nombre': 'Jerónimo Valencia Ospina',
-      'correo': '@tumama.com',
+      'correo': 'jeronimo.valencia@example.com',
     },
     {
       'permisos': 'Administrador',
-      'nombre': 'Valeria',
-      'correo': '@apartadó.com',
+      'nombre': 'Valeria Espinal',
+      'correo': 'valeria.espinal@example.com',
+    },
+    {
+      'permisos': 'Usuario',
+      'nombre': 'Juan Perez',
+      'correo': 'juan.perez@example.com',
+    },
+    {
+      'permisos': 'Usuario',
+      'nombre': 'Maria Gomez',
+      'correo': 'maria.gomez@example.com',
+    },
+    {
+      'permisos': 'Usuario',
+      'nombre': 'Carlos Lopez',
+      'correo': 'carlos.lopez@example.com',
+    },
+    {
+      'permisos': 'Usuario',
+      'nombre': 'Luis Ramirez',
+      'correo': 'luis.ramirez@example.com',
     },
     // Estos datos son de ejemplo, ustedes añaden los que si son
   ];
