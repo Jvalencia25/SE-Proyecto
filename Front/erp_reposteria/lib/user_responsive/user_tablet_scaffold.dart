@@ -1,3 +1,4 @@
+import 'package:erp_reposteria/catalogue_responsive/catalogue_desktop_scaffold.dart';
 import 'package:erp_reposteria/catalogue_responsive/catalogue_responsive_layout.dart';
 import 'package:erp_reposteria/constants.dart';
 import 'package:erp_reposteria/inventory_responsive/inventory_desktop_scaffold.dart';
@@ -52,7 +53,9 @@ class _TabletScaffoldState extends State<TabletScaffold> {
                       );
                       break;
                     case 1:
-                      targetScreen = CatalogueResponsiveLayout();
+                      targetScreen = CatalogueResponsiveLayout(
+                        desktopScaffold: CatalogueDesktopScaffold(),
+                      );
                       break;
                     case 2:
                       targetScreen = OrderResponsiveLayout(
