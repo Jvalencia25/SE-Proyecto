@@ -1,5 +1,7 @@
 package com.mrp.backend.backend.models.entities;
 
+import java.math.BigDecimal;
+
 import com.mrp.backend.backend.models.entities.keys.IngredienteProductoKey;
 
 import jakarta.persistence.EmbeddedId;
@@ -17,6 +19,8 @@ public class IngredienteProducto {
 
     @ManyToOne
     private Insumo insumo;
+
+    private BigDecimal cant;
 
     public IngredienteProductoKey getId() {
         return id;
@@ -41,4 +45,13 @@ public class IngredienteProducto {
     public void setIngrediente(Insumo ingrediente) {
         this.insumo = ingrediente;
     }
+
+    public BigDecimal getCant() {
+        return cant;
+    }
+
+    public void setCant(BigDecimal cant) {
+        this.cant = cant;
+    }
+
 }

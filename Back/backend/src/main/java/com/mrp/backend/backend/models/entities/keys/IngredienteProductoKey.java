@@ -6,23 +6,23 @@ import jakarta.persistence.Embeddable;
 @Embeddable
 public class IngredienteProductoKey implements Serializable {
 
-    private Long idProducto;
-    private Long idIngrediente;
+    private Long id_producto;
+    private Long id_ingrediente;
 
-    public Long getIdProducto() {
-        return idProducto;
+    public Long getId_producto() {
+        return id_producto;
     }
 
-    public void setIdProducto(Long idProducto) {
-        this.idProducto = idProducto;
+    public void setId_producto(Long idProducto) {
+        this.id_producto = idProducto;
     }
 
-    public Long getIdIngrediente() {
-        return idIngrediente;
+    public Long getId_ingrediente() {
+        return id_ingrediente;
     }
 
-    public void setIdIngrediente(Long idIngrediente) {
-        this.idIngrediente = idIngrediente;
+    public void setId_ingrediente(Long idIngrediente) {
+        this.id_ingrediente = idIngrediente;
     }
 
     @Override
@@ -32,14 +32,14 @@ public class IngredienteProductoKey implements Serializable {
 
         IngredienteProductoKey that = (IngredienteProductoKey) o;
 
-        if (!idProducto.equals(that.idProducto)) return false;
-        return idIngrediente.equals(that.idIngrediente);
+        if (!id_producto.equals(that.id_producto)) return false;
+        return id_ingrediente.equals(that.id_ingrediente);
     }
 
     @Override
     public int hashCode() {
-        int result = idProducto.hashCode();
-        result = 31 * result + idIngrediente.hashCode();
+        int result = id_producto.hashCode();
+        result = 31 * result + id_ingrediente.hashCode();
         return result;
     }
 }

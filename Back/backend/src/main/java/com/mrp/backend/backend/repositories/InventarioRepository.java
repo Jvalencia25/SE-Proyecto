@@ -17,4 +17,7 @@ public interface InventarioRepository extends CrudRepository<Inventario, Inventa
            "i2.unidad_medida, i.fecha_vencimiento, i.fecha_ingreso, i2.precio, i2.proveedor) " +
            "FROM Inventario i JOIN i.insumo i2", nativeQuery = true)
     List<InventarioInsumo> getInventarios();
+
+    @Query(value="select * from inventario i where i.id_insumo =:idIngrediente fetch first 1 row only", nativeQuery = true)
+    Inventario findByIdIngrediente(Long idIngrediente);
 }

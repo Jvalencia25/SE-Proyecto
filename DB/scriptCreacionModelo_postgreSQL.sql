@@ -62,6 +62,7 @@ CREATE TABLE "inventario" (
 CREATE TABLE "ingrediente_producto" (
     "id_producto" BIGINT NOT NULL,
     "id_ingrediente" BIGINT NOT NULL,
+    "cant" DECIMAL(10,2) not NULL
     PRIMARY KEY ("id_producto", "id_ingrediente"),
     FOREIGN KEY ("id_producto") REFERENCES "producto" ("id"),
     FOREIGN KEY ("id_ingrediente") REFERENCES "insumo" ("id")
@@ -164,71 +165,40 @@ VALUES
     ('Torta fría de tres leches', 'Deliciosa torta empapada en una mezcla de tres leches, con un sabor suave y una textura húmeda que se derrite en la boca.', 'Refrigera y sirve', '38000', 'Pastel', NULL);
 
 -- Insertar datos en la tabla ingrediente_producto
--- Pie de queso
-INSERT INTO ingrediente_producto (id_producto, id_ingrediente)
-VALUES 
-    (1, 1),  -- queso crema
-    (1, 2),  -- huevos
-    (1, 3),  -- azúcar
-    (1, 4);  -- galletas
-
--- Pie de limón
-INSERT INTO ingrediente_producto (id_producto, id_ingrediente)
-VALUES 
-    (2, 5),  -- limones
-    (2, 2),  -- huevos
-    (2, 6),  -- leche condensada
-    (2, 4);  -- galletas
-
--- Pie de jamón y queso
-INSERT INTO ingrediente_producto (id_producto, id_ingrediente)
-VALUES 
-    (3, 7),  -- jamón
-    (3, 8),  -- queso
-    (3, 2),  -- huevos
-    (3, 9);  -- crema de leche
-
--- Pastel de chocolate
-INSERT INTO ingrediente_producto (id_producto, id_ingrediente)
-VALUES 
-    (4, 10),  -- chocolate para hornear
-    (4, 2),   -- huevos
-    (4, 11),  -- harina
-    (4, 3);   -- azúcar
-
--- Pie de pollo
-INSERT INTO ingrediente_producto (id_producto, id_ingrediente)
-VALUES 
-    (5, 12),  -- pollo desmenuzado
-    (5, 9),   -- crema de leche
-    (5, 13),  -- verduras
-    (5, 18);  -- masa de hojaldre
-
--- Croissants de chocolate x10
-INSERT INTO ingrediente_producto (id_producto, id_ingrediente)
-VALUES 
-    (6, 14),  -- mantequilla
-    (6, 11),  -- harina
-    (6, 15),  -- polvo para hornear
-    (6, 10),  -- chocolate
-    (6, 17);  -- leche
-
--- Churros de arequipe x10
-INSERT INTO ingrediente_producto (id_producto, id_ingrediente)
-VALUES 
-    (7, 11),  -- harina
-    (7, 17),  -- leche
-    (7, 14),  -- mantequilla
-    (7, 15),  -- polvo para hornear
-    (7, 16);  -- arequipe
-
--- Torta fría de tres leches
-INSERT INTO ingrediente_producto (id_producto, id_ingrediente)
-VALUES 
-    (8, 17),  -- leche evaporada
-    (8, 6),   -- leche condensada
-    (8, 9),   -- crema de leche
-    (8, 18);  -- bizcocho
+INSERT INTO ingrediente_producto ("id_producto", "id_ingrediente", "cant")
+VALUES
+(1, 1, 500.00), -- 500 unidades del ingrediente 1 para el producto 1
+(1, 2, 3.00),   -- 3 unidades del ingrediente 2 para el producto 1
+(1, 3, 200.00), -- 200 unidades del ingrediente 3 para el producto 1
+(1, 4, 200.00), -- 200 unidades del ingrediente 4 para el producto 1
+(2, 5, 4.00),   -- 4 unidades del ingrediente 5 para el producto 2
+(2, 2, 4.00),   -- 4 unidades del ingrediente 2 para el producto 2
+(2, 6, 397.00), -- 397 unidades del ingrediente 6 para el producto 2
+(2, 4, 200.00), -- 200 unidades del ingrediente 4 para el producto 2
+(3, 7, 200.00), -- 200 unidades del ingrediente 7 para el producto 3
+(3, 1, 200.00), -- 200 unidades del ingrediente 1 para el producto 3
+(3, 2, 3.00),   -- 3 unidades del ingrediente 2 para el producto 3
+(3, 8, 200.00), -- 200 unidades del ingrediente 8 para el producto 3
+(4, 9, 200.00), -- 200 unidades del ingrediente 9 para el producto 4
+(4, 2, 4.00),   -- 4 unidades del ingrediente 2 para el producto 4
+(4, 10, 200.00),-- 200 unidades del ingrediente 10 para el producto 4
+(4, 11, 200.00),-- 200 unidades del ingrediente 11 para el producto 4
+(5, 12, 300.00),-- 300 unidades del ingrediente 12 para el producto 5
+(5, 6, 200.00), -- 200 unidades del ingrediente 6 para el producto 5
+(5, 13, 150.00),-- 150 unidades del ingrediente 13 para el producto 5
+(5, 14, 1.00),  -- 1 unidad del ingrediente 14 para el producto 5
+(6, 15, 250.00),-- 250 unidades del ingrediente 15 para el producto 6
+(6, 16, 500.00),-- 500 unidades del ingrediente 16 para el producto 6
+(6, 17, 50.00), -- 50 unidades del ingrediente 17 para el producto 6
+(6, 18, 200.00),-- 200 unidades del ingrediente 18 para el producto 6
+(7, 19, 250.00),-- 250 unidades del ingrediente 19 para el producto 7
+(7, 20, 250.00),-- 250 unidades del ingrediente 20 para el producto 7
+(7, 16, 200.00),-- 200 unidades del ingrediente 16 para el producto 7
+(7, 21, 50.00), -- 50 unidades del ingrediente 21 para el producto 7
+(8, 22, 354.00),-- 354 unidades del ingrediente 22 para el producto 8
+(8, 23, 397.00),-- 397 unidades del ingrediente 23 para el producto 8
+(8, 24, 250.00),-- 250 unidades del ingrediente 24 para el producto 8
+(8, 25, 1.00);  -- 1 unidad del ingrediente 25 para el producto 8
 
 INSERT INTO inventario (id_insumo, fecha_ingreso, cantidad, fecha_vencimiento)
 VALUES 

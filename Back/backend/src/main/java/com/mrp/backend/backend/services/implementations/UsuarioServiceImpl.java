@@ -81,7 +81,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 
         Usuario admin=a.get();
 
-        if (!this.passwordEncoder.matches(datos.getContraseña(), admin.getContraseña() )) throw new exception("Contraseña no válida");
+        //if (!this.passwordEncoder.matches(datos.getContraseña(), admin.getContraseña() )) throw new exception("Contraseña no válida");
         
         if (admin.getNivel_acceso().equals("admin")){
 

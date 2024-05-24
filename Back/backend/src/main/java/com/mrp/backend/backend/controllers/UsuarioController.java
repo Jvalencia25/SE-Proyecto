@@ -49,7 +49,6 @@ public class UsuarioController {
         }
         return ResponseEntity.notFound().build();
     }
-    
 
     @PostMapping
     public ResponseEntity<?> create(@RequestBody IngresoUsuario datos) {
